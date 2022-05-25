@@ -26,7 +26,10 @@ export default function Tags({ tags }) {
           {Object.keys(tags).length === 0 && 'No tags found.'}
           {sortedTags.map((t) => {
             return (
-              <div key={t} className="mt-2 mb-2 mr-5">
+              <div
+                key={t}
+                className="mt-2 mb-2 mr-5 rounded-full bg-main px-3 py-0.5 hover:bg-lime-600 dark:hover:bg-lime-600"
+              >
                 <Tag text={t} />
                 <Link
                   href={`/tags/${kebabCase(t)}`}
